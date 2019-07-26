@@ -23,8 +23,7 @@
           "name",
           "resource",
           "table_name",
-          "geometries",
-          "filter_condition",
+          "filter_parameters",
 		  "labels",
 		  "simplification",
 		  "z_index",
@@ -52,33 +51,11 @@
             "description": "Name of the database table to use for storing geometries of this area type",
             "pattern": "^(.*)$"
           },
-          "geometries": {
-            "$id": "#/properties/types/items/properties/geometries",
-            "type": "array",
-            "title": "Geometry types list",
-            "description": "Specifies a list of geometry types that are supposed to be used for this area type",
-            "maxItems": 3,
-            "minItems": 1,
-            "uniqueItems": true,
-            "additionalItems": false,
-            "items": {
-              "$id": "#/properties/types/items/properties/geometries/items",
-              "type": "string",
-              "enum": [
-                "nodes",
-                "lines",
-                "polygons"
-              ],
-              "title": "Geometry types",
-              "description": "Geometry types that may be chosen for representing areas of this area type",
-              "pattern": "^(.*)$"
-            }
-          },
-          "filter_condition": {
-            "$id": "#/properties/types/items/properties/filter_condition",
+          "filter_parameters": {
+            "$id": "#/properties/types/items/properties/filter_parameters",
             "type": "string",
             "title": "Filter condition",
-            "description": "Logical expression describing the OSM data to use for this area type"
+            "description": "Osmfilter arguments that allow the extraction of geometries for this area type from OSM data"
           },
           "labels": {
             "$id": "#/properties/types/items/properties/labels",

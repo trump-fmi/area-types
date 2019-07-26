@@ -1,14 +1,10 @@
 {
   "types": [
-      {
+    {
       "name": "States",
       "resource": "states",
       "table_name": "states",
-      "geometries": [
-        "lines",
-        "polygons"
-      ],
-      "filter_condition": "\"admin_level\"='4'",
+      "filter_parameters": "--drop-version --keep=\"admin_level=4\" --keep-tags=\"all name= type=\"",
       "labels": false,
       "simplification": true,
 	  "z_index": 10,
@@ -19,11 +15,7 @@
       "name": "Towns",
       "resource": "towns",
       "table_name": "towns",
-      "geometries": [
-        "lines",
-        "polygons"
-      ],
-      "filter_condition": "\"admin_level\"='8'",
+      "filter_parameters": "--drop-version --keep=\"admin_level=8\" --keep-tags=\"all name= type=\"",
       "labels": false,
       "simplification": true,
 	  "z_index": 5,
@@ -34,11 +26,7 @@
       "name": "Woodland",
       "resource": "woodland",
       "table_name": "woodland",
-      "geometries": [
-        "lines",
-        "polygons"
-      ],
-      "filter_condition": "\"natural\"='wood' OR \"landuse\"='forest'",
+	  "filter_parameters": "--drop-version --keep=\"landuse=forest\" --keep-tags=\"all name= type=\"",
       "labels": true,
       "simplification": true,
 	  "z_index": 0,
@@ -47,6 +35,3 @@
     }
   ]
 }
-
-
-
