@@ -24,7 +24,6 @@
           "resource",
           "table_name",
           "filter_parameters",
-		  "labels",
 		  "simplification",
 		  "z_index",
 		  "zoom_min",
@@ -56,13 +55,6 @@
             "type": "string",
             "title": "Filter condition",
             "description": "Osmfilter arguments that allow the extraction of geometries for this area type from OSM data"
-          },
-          "labels": {
-            "$id": "#/properties/types/items/properties/labels",
-            "type": "boolean",
-            "title": "Labeling flag",
-            "description": "Specifies whether the geometries for this area type are supposed to be labeled with names.",
-            "default": false
           },
           "simplification": {
             "$id": "#/properties/types/items/properties/simplification",
