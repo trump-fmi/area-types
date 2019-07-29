@@ -26,7 +26,7 @@
       "name": "Woodland",
       "resource": "woodland",
       "table_name": "woodland",
-	  "filter_parameters": "--drop-version --keep=\"landuse=forest\" --keep-tags=\"all name= type=\"",
+	  "filter_parameters": "--drop-version --keep=\"landuse=forest or natural=wood\" --keep-tags=\"all name= type= area= landuse= natural=\"",
       "labels": true,
       "simplification": true,
 	  "z_index": 0,
