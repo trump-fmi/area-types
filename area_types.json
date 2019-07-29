@@ -32,7 +32,7 @@
 	  "z_index": 1,
       "zoom_min": 8,
       "zoom_max": 20
-    }
+    },
     {
       "name": "Woodland",
       "resource": "woodland",
