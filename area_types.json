@@ -41,6 +41,16 @@
       "zoom_max": 20
     },
     {
+      "name": "Military",
+      "resource": "military",
+      "table_name": "military",
+	  "filter_parameters": "--drop-version --keep=\"landuse=military\" --keep-tags=\"all name= type= area= landuse=\"",
+      "simplification": true,
+	  "z_index": 4,
+      "zoom_min": 10,
+      "zoom_max": 20
+    },
+    {
       "name": "Residential",
       "resource": "residential",
       "table_name": "residential",
