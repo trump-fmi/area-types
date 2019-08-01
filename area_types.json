@@ -38,6 +38,7 @@
       "resource": "lakes",
       "table_name": "lakes",
 	  "filter_parameters": "--drop-version --keep=\"natural=water\" --keep-tags=\"all name= type= area= natural= waterway=\"",
+	  "search_highlight": false,
       "simplification": true,
 	  "z_index": 10,
       "zoom_min": 8,
