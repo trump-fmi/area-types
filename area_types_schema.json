@@ -56,6 +56,13 @@
             "title": "Filter condition",
             "description": "Osmfilter arguments that allow the extraction of geometries for this area type from OSM data"
           },
+          "search_highlight": {
+            "$id": "#/properties/types/items/properties/search_highlight",
+            "type": "boolean",
+            "title": "Highlight search result",
+            "description": "Specifies whether areas of this area type are supposed to be highlighted as search results",
+            "default": false
+          },
           "simplification": {
             "$id": "#/properties/types/items/properties/simplification",
             "type": "boolean",
