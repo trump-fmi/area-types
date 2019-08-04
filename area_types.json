@@ -1,92 +1,125 @@
 {
-  "types": [
-    {
-      "name": "States",
-      "resource": "states",
-      "table_name": "states",
-      "filter_parameters": "--drop-version --keep=\"admin_level=4\" --keep-tags=\"all name= type=\"",
-	  "search_highlight": false,
-      "simplification": true,
-	  "z_index": 20,
-      "zoom_min": 5,
-      "zoom_max": 16
-    },
-    {
-      "name": "Towns",
-      "resource": "towns",
-      "table_name": "towns",
-      "filter_parameters": "--drop-version --keep=\"admin_level=8\" --keep-tags=\"all name= type=\"",
-	  "search_highlight": true,
-      "simplification": true,
-	  "z_index": 15,
-      "zoom_min": 9,
-      "zoom_max": 20
-    },
-	{
-      "name": "Rivers",
-      "resource": "rivers",
-      "table_name": "rivers",
-	  "filter_parameters": "--drop-version --keep=\"waterway=river\" --keep-tags=\"all name= type= area= natural= waterway=\"",
-	  "search_highlight": false,
-      "simplification": true,
-	  "z_index": 10,
-      "zoom_min": 8,
-      "zoom_max": 20
-    },
-	{
-      "name": "Lakes",
-      "resource": "lakes",
-      "table_name": "lakes",
-	  "filter_parameters": "--drop-version --keep=\"natural=water\" --keep-tags=\"all name= type= area= natural= waterway=\"",
-	  "search_highlight": false,
-      "simplification": true,
-	  "z_index": 10,
-      "zoom_min": 8,
-      "zoom_max": 20
-    },
-    {
-      "name": "Commercial",
-      "resource": "commercial",
-      "table_name": "commercial",
-	  "filter_parameters": "--drop-version --keep=\"landuse=commercial or landuse=industrial or landuse=retail\" --keep-tags=\"all name= type= area= landuse=\"",
-	  "search_highlight": false,
-      "simplification": true,
-	  "z_index": 4,
-      "zoom_min": 10,
-      "zoom_max": 20
-    },
-    {
-      "name": "Military",
-      "resource": "military",
-      "table_name": "military",
-	  "filter_parameters": "--drop-version --keep=\"landuse=military\" --keep-tags=\"all name= type= area= landuse=\"",
-	  "search_highlight": false,
-      "simplification": true,
-	  "z_index": 4,
-      "zoom_min": 10,
-      "zoom_max": 20
-    },
-    {
-      "name": "Residential",
-      "resource": "residential",
-      "table_name": "residential",
-	  "filter_parameters": "--drop-version --keep=\"landuse=residential\" --keep-tags=\"all name= type= area= landuse=\"",
-	  "search_highlight": false,
-      "simplification": true,
-	  "z_index": 4,
-      "zoom_min": 10,
-      "zoom_max": 20
-    },
-    {
-      "name": "Woodland",
-      "resource": "woodland",
-      "table_name": "woodland",
-	  "filter_parameters": "--drop-version --keep=\"landuse=forest or natural=wood\" --keep-tags=\"all name= type= area= landuse= natural=\"",
-	  "search_highlight": false,
-      "simplification": true,
-	  "z_index": 2,
-      "zoom_min": 7,
-      "zoom_max": 20
-    }
-  ]
+	"types": [
+		{
+			"name": "States",
+			"resource": "states",
+			"table_name": "states",
+			"filter_parameters": "--drop-version --keep=\"admin_level=4\" --keep-tags=\"all name= type=\"",
+			"search_highlight": false,
+			"simplification": true,
+			"z_index": 20,
+			"zoom_min": 5,
+			"zoom_max": 16
+		},
+		{
+			"name": "Towns",
+			"resource": "towns",
+			"table_name": "towns",
+			"filter_parameters": "--drop-version --keep=\"admin_level=8\" --keep-tags=\"all name= type=\"",
+			"search_highlight": true,
+			"simplification": true,
+			"z_index": 15,
+			"zoom_min": 9,
+			"zoom_max": 20
+		},
+		{
+			"name": "Rivers",
+			"resource": "rivers",
+			"table_name": "rivers",
+			"filter_parameters": "--drop-version --keep=\"waterway=river\" --keep-tags=\"all name= type= area= natural= waterway=\"",
+			"search_highlight": false,
+			"simplification": true,
+			"z_index": 10,
+			"zoom_min": 8,
+			"zoom_max": 20
+		},
+		{
+			"name": "Lakes",
+			"resource": "lakes",
+			"table_name": "lakes",
+			"filter_parameters": "--drop-version --keep=\"natural=water\" --keep-tags=\"all name= type= area= natural= waterway=\"",
+			"search_highlight": false,
+			"simplification": true,
+			"z_index": 10,
+			"zoom_min": 8,
+			"zoom_max": 20
+		},
+		{
+			"name": "Commercial",
+			"resource": "commercial",
+			"table_name": "commercial",
+			"filter_parameters": "--drop-version --keep=\"landuse=commercial or landuse=industrial or landuse=retail\" --keep-tags=\"all name= type= area= landuse=\"",
+			"search_highlight": false,
+			"simplification": true,
+			"z_index": 4,
+			"zoom_min": 10,
+			"zoom_max": 20
+		},
+		{
+			"name": "Military",
+			"resource": "military",
+			"table_name": "military",
+			"filter_parameters": "--drop-version --keep=\"landuse=military\" --keep-tags=\"all name= type= area= landuse=\"",
+			"search_highlight": false,
+			"simplification": true,
+			"z_index": 4,
+			"zoom_min": 10,
+			"zoom_max": 20
+		},
+		{
+			"name": "Residential",
+			"resource": "residential",
+			"table_name": "residential",
+			"filter_parameters": "--drop-version --keep=\"landuse=residential\" --keep-tags=\"all name= type= area= landuse=\"",
+			"search_highlight": false,
+			"simplification": true,
+			"z_index": 4,
+			"zoom_min": 10,
+			"zoom_max": 20
+		},
+		{
+			"name": "Woodland",
+			"resource": "woodland",
+			"table_name": "woodland",
+			"filter_parameters": "--drop-version --keep=\"landuse=forest or natural=wood\" --keep-tags=\"all name= type= area= landuse= natural=\"",
+			"search_highlight": false,
+			"simplification": true,
+			"z_index": 2,
+			"zoom_min": 7,
+			"zoom_max": 20
+		},
+		{
+			"name": "Farmland",
+			"resource": "farmland",
+			"table_name": "farmland",
+			"filter_parameters": "--drop-version --keep=\"landuse=farmland or landuse=meadow\" --keep-tags=\"all name= type= area= landuse= natural=\"",
+			"search_highlight": false,
+			"simplification": true,
+			"z_index": 2,
+			"zoom_min": 7,
+			"zoom_max": 20
+		},
+		{
+			"name": "Buildings",
+			"resource": "buildings",
+			"table_name": "buildings",
+			"filter_parameters": "--drop-version --keep=\"building=\" --keep-tags=\"all name= type= area= building=\"",
+			"search_highlight": true,
+			"simplification": true,
+			"z_index": 6,
+			"zoom_min": 14,
+			"zoom_max": 20
+		},
+		{
+			"name": "Streets",
+			"resource": "streets",
+			"table_name": "streets",
+			"filter_parameters": "--drop-version --keep=\"highway=\" --drop=\"highway=living_street highway=pedestrian highway=track highway=bus_guideway highway=footway highway=bridleway highway=steps highway=path highway=cycleway highway=elevator highway\" --keep-tags=\"all name= type= area= highway=\"",
+			"search_highlight": false,
+			"simplification": true,
+			"z_index": 5,
+			"zoom_min": 14,
+			"zoom_max": 20
+		}
+	]
 }
