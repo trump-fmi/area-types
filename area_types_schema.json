@@ -12,7 +12,7 @@
 		  "$id": "#/properties/types",
 		  "type": "array",
 		  "title": "Area types list",
-		  "description": "List of area types that are supposed to be hosted",
+		  "description": "List of area types that are supposed to be hosted.",
 		  "minItems": 0,
 		  "uniqueItems": true,
 		  "items": {
@@ -23,7 +23,7 @@
 				  "name",
 				  "resource",
 				  "table_name",
-				  "filter_parameters",
+				  "filter_conditions",
 				  "simplification",
 				  "z_index",
 				  "zoom_min",
@@ -34,40 +34,49 @@
 					  "$id": "#/properties/types/items/properties/name",
 					  "type": "string",
 					  "title": "Area type name",
-					  "description": "Name of the area type as it may be displayed to the user",
+					  "description": "Name of the area type as it may be displayed to the user.",
 					  "default": ""
 				  },
 				  "resource": {
 					  "$id": "#/properties/types/items/properties/resource",
 					  "type": "string",
 					  "title": "Resource Name",
-					  "description": "Name of the resource under which the geometrical data for this area type will be provided by the area server"
+					  "description": "Name of the resource at which the geometrical data for this area type will be provided by the area server."
 				  },
 				  "table_name": {
 					  "$id": "#/properties/types/items/properties/table_name",
 					  "type": "string",
 					  "title": "Database table name",
-					  "description": "Name of the database table to use for storing geometries of this area type",
+					  "description": "Name of the database table to use for storing geometries of this area type.",
 					  "pattern": "^(.*)$"
 				  },
-				  "filter_parameters": {
-					  "$id": "#/properties/types/items/properties/filter_parameters",
-					  "type": "string",
-					  "title": "Filter condition",
-					  "description": "Osmfilter arguments that allow the extraction of geometries for this area type from OSM data"
+				  "filter_conditions": {
+					  "$id": "#/properties/types/items/properties/filter_conditions",
+					  "type": "array",
+					  "title": "Filter conditions list",
+					  "description": "List of Osmfilter command line calls for extrating geometries for this area type from OSM data. For each list element the extraction pipeline will be called separately with the specified Osmfilter parameters.",
+					  "minItems": 1,
+					  "uniqueItems": true,
+					  "items": {
+					  	  "$id": "#/properties/types/items/properties/filter_conditions/items",
+                          "type": "string",
+	  	  	  	  	  	  "title": "Filter condition",
+						  "description": "Osmfilter command line parameters that allow the extraction of geometries for this area type from OSM data using Osmfilter.",
+						  "minLength": 3
+					  }
 				  },
 				  "search_highlight": {
 					  "$id": "#/properties/types/items/properties/search_highlight",
 					  "type": "boolean",
 					  "title": "Highlight search result",
-					  "description": "Specifies whether areas of this area type are supposed to be highlighted as search results",
+					  "description": "Specifies whether areas of this area type are supposed to be highlighted as search results.",
 					  "default": false
 				  },
 				  "simplification": {
 					  "$id": "#/properties/types/items/properties/simplification",
 					  "type": "boolean",
 					  "title": "Simplification flag",
-					  "description": "Specifies whether the geometries for this area type are supposed to be simplified with respect to the zoom level",
+					  "description": "Specifies whether the geometries for this area type are supposed to be simplified with respect to the zoom level.",
 					  "default": true
 				  },
 				  "z_index": {
@@ -83,7 +92,7 @@
 					  "$id": "#/properties/types/items/properties/zoom_min",
 					  "type": "number",
 					  "title": "Minimum zoom level",
-					  "description": "Minimum zoom value (inclusive) for which areas of this type are supposed to be displayed",
+					  "description": "Minimum zoom value (inclusive) for which areas of this type are supposed to be displayed.",
 					  "minimum": 0.0,
 					  "maximum": 28.0,
 					  "default": 0.0
@@ -92,7 +101,7 @@
 					  "$id": "#/properties/types/items/properties/zoom_max",
 					  "type": "number",
 					  "title": "Maximum zoom level",
-					  "description": "Maximum zoom value (exclusive) for which areas of this type are supposed to be displayed",
+					  "description": "Maximum zoom value (exclusive) for which areas of this type are supposed to be displayed.",
 					  "minimum": 0.0,
 					  "maximum": 28.0,
 					  "default": 28.0
