@@ -191,31 +191,70 @@
       ],
       "search_highlight": false,
       "simplification": false,
-      "z_index": 6,
+      "z_index": 13,
       "zoom_min": 15,
       "zoom_max": 20
     },
     {
-      "name": "Streets",
-      "resource": "streets",
-      "table_name": "streets",
+      "name": "Motorways",
+      "resource": "motorways",
+      "table_name": "motorways",
       "filter_parameters": [
-        "--drop-version --keep=\"highway=\" --drop=\"highway=tertiary\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=living_street\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=residential\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=pedestrian\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=track\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=bus_guideway\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=footway\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=bridleway\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=highway=steps\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=path\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=cycleway\" --keep-tags=\"all name= type= area= highway=\"",
-        "--drop-version --keep=\"highway=\" --drop=\"highway=elevator\" --keep-tags=\"all name= type= area= highway=\""
+        "--drop-version --keep=\"highway=motorway\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=motorway_link\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=trunk\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=trunk_link\" --keep-tags=\"all name= type= area= highway=\""
+		
       ],
       "search_highlight": false,
       "simplification": false,
-      "z_index": 5,
+      "z_index": 12,
+      "zoom_min": 14,
+      "zoom_max": 20
+    },
+    {
+      "name": "Main streets",
+      "resource": "main_streets",
+      "table_name": "main_streets",
+      "filter_parameters": [
+        "--drop-version --keep=\"highway=primary\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=primary_link\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=secondary\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=secondary_link\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=tertiary\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=tertiary_link\" --keep-tags=\"all name= type= area= highway=\""
+      ],
+      "search_highlight": false,
+      "simplification": false,
+      "z_index": 12,
+      "zoom_min": 14,
+      "zoom_max": 20
+    },
+    {
+      "name": "Bystreets",
+      "resource": "bystreets",
+      "table_name": "bystreets",
+      "filter_parameters": [
+        "--drop-version --keep=\"highway=unclassified\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=residential\" --keep-tags=\"all name= type= area= highway=\"",
+		"--drop-version --keep=\"highway=living_street\" --keep-tags=\"all name= type= area= highway=\""
+      ],
+      "search_highlight": false,
+      "simplification": false,
+      "z_index": 12,
+      "zoom_min": 14,
+      "zoom_max": 20
+    },
+    {
+      "name": "Railways",
+      "resource": "railways",
+      "table_name": "railways",
+      "filter_parameters": [
+        "--drop-version --keep=\"railway=rail\" --keep-tags=\"all name= type= area= railway=\""
+      ],
+      "search_highlight": false,
+      "simplification": false,
+      "z_index": 14,
       "zoom_min": 14,
       "zoom_max": 20
     }
