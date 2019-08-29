@@ -27,24 +27,37 @@
       "zoom_max": 20
     },
     {
-      "name": "Rivers",
-      "resource": "rivers",
-      "table_name": "rivers",
+      "name": "Woodland",
+      "resource": "woodland",
+      "table_name": "woodland",
       "filter_parameters": [
-        "--drop-version --keep=\"waterway=river\" --keep-tags=\"all name= type= area= natural= waterway=\""
+        "--drop-version --keep=\"landuse=forest or natural=wood\" --keep-tags=\"all name= type= area= landuse= natural=\""
       ],
       "search_highlight": false,
       "simplification": true,
-      "z_index": 10,
-      "zoom_min": 8,
+      "z_index": 2,
+      "zoom_min": 7,
       "zoom_max": 20
     },
     {
-      "name": "Lakes",
-      "resource": "lakes",
-      "table_name": "lakes",
+      "name": "Farmland",
+      "resource": "farmland",
+      "table_name": "farmland",
       "filter_parameters": [
-        "--drop-version --keep=\"natural=water\" --keep-tags=\"all name= type= area= natural= waterway=\""
+        "--drop-version --keep=\"landuse=farmland or landuse=meadow\" --keep-tags=\"all name= type= area= landuse= natural=\""
+      ],
+      "search_highlight": false,
+      "simplification": true,
+      "z_index": 2,
+      "zoom_min": 7,
+      "zoom_max": 20
+    },
+    {
+      "name": "Water",
+      "resource": "water",
+      "table_name": "water",
+      "filter_parameters": [
+        "--drop-version --keep=\"natural=water or waterway=river\" --keep-tags=\"all name= type= area= natural= waterway=\""
       ],
       "search_highlight": false,
       "simplification": true,
@@ -89,32 +102,6 @@
       "simplification": true,
       "z_index": 4,
       "zoom_min": 10,
-      "zoom_max": 20
-    },
-    {
-      "name": "Woodland",
-      "resource": "woodland",
-      "table_name": "woodland",
-      "filter_parameters": [
-        "--drop-version --keep=\"landuse=forest or natural=wood\" --keep-tags=\"all name= type= area= landuse= natural=\""
-      ],
-      "search_highlight": false,
-      "simplification": true,
-      "z_index": 2,
-      "zoom_min": 7,
-      "zoom_max": 20
-    },
-    {
-      "name": "Farmland",
-      "resource": "farmland",
-      "table_name": "farmland",
-      "filter_parameters": [
-        "--drop-version --keep=\"landuse=farmland or landuse=meadow\" --keep-tags=\"all name= type= area= landuse= natural=\""
-      ],
-      "search_highlight": false,
-      "simplification": true,
-      "z_index": 2,
-      "zoom_min": 7,
       "zoom_max": 20
     },
     {
