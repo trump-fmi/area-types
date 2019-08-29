@@ -57,7 +57,7 @@
       "resource": "water",
       "table_name": "water",
       "filter_parameters": [
-        "--drop-version --keep=\"natural=water or waterway=river\" --keep-tags=\"all name= type= area= natural= waterway=\""
+        "--drop-version --keep=\"natural=water or waterway=riverbank or waterway=stream\" --keep-tags=\"all name= type= area= natural= waterway=\""
       ],
       "search_highlight": false,
       "simplification": true,
