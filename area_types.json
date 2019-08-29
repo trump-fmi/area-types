@@ -189,10 +189,10 @@
         "--drop-version --keep=\"building=ruins\" --keep-tags=\"all name= type= area= building=\"",
         "--drop-version --keep=\"building=yes\" --keep-tags=\"all name= type= area= building=\""
       ],
-      "search_highlight": true,
-      "simplification": true,
+      "search_highlight": false,
+      "simplification": false,
       "z_index": 6,
-      "zoom_min": 14,
+      "zoom_min": 15,
       "zoom_max": 20
     },
     {
@@ -214,7 +214,7 @@
         "--drop-version --keep=\"highway=\" --drop=\"highway=elevator\" --keep-tags=\"all name= type= area= highway=\""
       ],
       "search_highlight": false,
-      "simplification": true,
+      "simplification": false,
       "z_index": 5,
       "zoom_min": 14,
       "zoom_max": 20
