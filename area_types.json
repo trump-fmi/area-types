@@ -1,19 +1,6 @@
 {
   "types": [
     {
-      "name": "States",
-      "resource": "states",
-      "table_name": "states",
-      "filter_parameters": [
-        "--drop-version --keep=\"admin_level=4\" --keep-tags=\"all name= type=\""
-      ],
-      "search_highlight": false,
-      "simplification": true,
-      "z_index": 20,
-      "zoom_min": 5,
-      "zoom_max": 16
-    },
-    {
       "name": "Towns",
       "resource": "towns",
       "table_name": "towns",
@@ -57,7 +44,7 @@
       "resource": "water",
       "table_name": "water",
       "filter_parameters": [
-        "--drop-version --keep=\"natural=water or waterway=riverbank or waterway=stream\" --keep-tags=\"all name= type= area= natural= waterway= width=\""
+        "--drop-version --keep=\"natural=water or waterway=riverbank or waterway=stream\" --drop=\"tunnel=yes\" --keep-tags=\"all name= type= area= natural= waterway= width=\""
       ],
       "search_highlight": false,
       "simplification": true,
@@ -196,7 +183,7 @@
       "search_highlight": false,
       "simplification": false,
       "z_index": 12,
-      "zoom_min": 14,
+      "zoom_min": 10,
       "zoom_max": 20
     },
     {
@@ -214,7 +201,7 @@
       "search_highlight": false,
       "simplification": false,
       "z_index": 12,
-      "zoom_min": 14,
+      "zoom_min": 12,
       "zoom_max": 20
     },
     {
@@ -242,7 +229,7 @@
       "search_highlight": false,
       "simplification": false,
       "z_index": 14,
-      "zoom_min": 14,
+      "zoom_min": 12,
       "zoom_max": 20
     }
   ]
