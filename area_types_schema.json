@@ -56,13 +56,13 @@
                   "$id": "#/properties/types/items/properties/sources/items/properties/resource",
                   "type": "string",
                   "title": "Resource Name",
-                  "description": "Name of the resource under which the geometrical data for this area type source will be provided by the area server"
+                  "description": "Name of the resource under which the geometrical data for this area type source will be provided by the area server. Needs to be unique among all area types"
                 },
                 "table_name": {
                   "$id": "#/properties/types/items/properties/sources/items/properties/table_name",
                   "type": "string",
                   "title": "Database table name",
-                  "description": "Name of the database table to use for storing geometries of this area type source",
+                  "description": "Name of the database table to use for storing geometries of this area type source. Needs to be unique among all area types",
                   "pattern": "^(.*)$"
                 },
                 "filter_parameters": {
