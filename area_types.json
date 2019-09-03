@@ -35,7 +35,7 @@
           "simplification": true,
           "z_index": 15,
           "zoom_min": 10,
-          "zoom_max": 14
+          "zoom_max": 15
         },
         {
           "filter_parameters": [
@@ -51,7 +51,7 @@
           "search_highlight": false,
           "simplification": true,
           "z_index": 15,
-          "zoom_min": 14,
+          "zoom_min": 15,
           "zoom_max": 20
         }
       ]
