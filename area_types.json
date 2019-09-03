@@ -10,7 +10,7 @@
           "labels": {
             "arced": true,
             "zoom_min": 8,
-            "zoom_max": 10
+            "zoom_max": 12
           },
           "resource": "districts",
           "table_name": "districts",
@@ -18,7 +18,7 @@
           "simplification": true,
           "z_index": 15,
           "zoom_min": 8,
-          "zoom_max": 10
+          "zoom_max": 12
         },
         {
           "filter_parameters": [
@@ -26,15 +26,15 @@
           ],
           "labels": {
             "arced": true,
-            "zoom_min": 10,
-            "zoom_max": 14
+            "zoom_min": 12,
+            "zoom_max": 15
           },
           "resource": "towns",
           "table_name": "towns",
           "search_highlight": true,
           "simplification": true,
           "z_index": 15,
-          "zoom_min": 10,
+          "zoom_min": 12,
           "zoom_max": 15
         },
         {
@@ -43,7 +43,7 @@
           ],
           "labels": {
             "arced": true,
-            "zoom_min": 14,
+            "zoom_min": 15,
             "zoom_max": 20
           },
           "resource": "villages",
