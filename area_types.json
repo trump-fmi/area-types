@@ -1,8 +1,8 @@
 {
-  "types": [
+  "groups": [
     {
       "name": "Borders",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"admin_level=6\" --keep-tags=\"all name= type=\""
@@ -58,7 +58,7 @@
     },
     {
       "name": "Woodland",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"landuse=forest or natural=wood\" --keep-tags=\"all name= type= area= landuse= natural=\""
@@ -75,7 +75,7 @@
     },
     {
       "name": "Farmland",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"landuse=farmland or landuse=meadow\" --keep-tags=\"all name= type= area= landuse= natural=\""
@@ -92,7 +92,7 @@
     },
     {
       "name": "Water",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"natural=water or waterway=riverbank or waterway=stream\" --drop=\"tunnel=yes\" --keep-tags=\"all name= type= area= natural= waterway= width=\""
@@ -109,7 +109,7 @@
     },
     {
       "name": "Commercial",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"landuse=commercial or landuse=industrial or landuse=retail\" --keep-tags=\"all name= type= area= landuse=\""
@@ -126,7 +126,7 @@
     },
     {
       "name": "Military",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"landuse=military\" --keep-tags=\"all name= type= area= landuse=\""
@@ -143,7 +143,7 @@
     },
     {
       "name": "Residential",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"landuse=residential\" --keep-tags=\"all name= type= area= landuse=\""
@@ -160,7 +160,7 @@
     },
     {
       "name": "Buildings",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"building=apartments\" --keep-tags=\"all name= type= area= building=\"",
@@ -242,7 +242,7 @@
     },
     {
       "name": "Motorways",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"highway=motorway\" --keep-tags=\"all name= type= area= highway=\"",
@@ -262,7 +262,7 @@
     },
     {
       "name": "Main streets",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"highway=primary\" --keep-tags=\"all name= type= area= highway=\"",
@@ -284,7 +284,7 @@
     },
     {
       "name": "Bystreets",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"highway=unclassified\" --keep-tags=\"all name= type= area= highway=\"",
@@ -303,7 +303,7 @@
     },
     {
       "name": "Railways",
-      "sources": [
+      "types": [
         {
           "filter_parameters": [
             "--drop-version --keep=\"railway=rail\" --keep-tags=\"all name= type= area= railway=\""
