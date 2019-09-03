@@ -19,10 +19,10 @@
         "$id": "#/properties/types/items",
         "type": "object",
         "title": "Area type",
+        "description": "Definition of an area type, consisting out of a name and a group of area sources.",
         "required": [
           "name",
-          "sources",
-          "z_index"
+          "sources"
         ],
         "properties": {
           "name": {
@@ -42,16 +42,64 @@
             "items": {
               "$id": "#/properties/types/items/properties/sources/items",
               "type": "object",
-              "title": "Source for an area type",
+              "title": "Area type source",
+              "description": "Source of an area type that describes how the corresponding area data is supposed to be extracted from OSM data, stored in a database, delivered on requests and displayed in an application",
               "required": [
+                "filter_parameters",
                 "resource",
                 "table_name",
-                "filter_parameters",
                 "simplification",
+                "z_index",
                 "zoom_min",
                 "zoom_max"
               ],
               "properties": {
+                "filter_parameters": {
+                  "$id": "#/properties/types/items/properties/sources/items/properties/filter_parameters",
+                  "type": "array",
+                  "title": "Filter conditions",
+                  "description": "Array of Osmfilter arguments that allow the extraction of geometries for this area type source from OSM data",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "labels": {
+                  "$id": "#/properties/types/items/properties/sources/items/properties/labels",
+                  "type": "object",
+                  "title": "Labeling options",
+                  "description": "Defines labeling options for this area type source. If no labels are desired, \"null\" should be assigned instead of an options object.",
+                  "required": [
+                    "arced",
+                    "zoom_min",
+                    "zoom_max"
+                  ],
+                  "properties": {
+                    "arced": {
+                      "$id": "#/properties/types/items/properties/sources/items/properties/labels/properties/arced",
+                      "type": "boolean",
+                      "title": "Arced",
+                      "description": "Whether the labels are supposed to be displayed arced"
+                    },
+                    "zoom_min": {
+                      "$id": "#/properties/types/items/properties/sources/items/properties/labels/properties/zoom_min",
+                      "type": "number",
+                      "title": "Minimum zoom level",
+                      "description": "Minimum zoom value (inclusive) for which the labels for this area source type are supposed to be displayed. Needs to be greater than or equal to the zoom_min field of the underlying area type source.",
+                      "minimum": 0.0,
+                      "maximum": 20.0,
+                      "default": 0.0
+                    },
+                    "zoom_max": {
+                      "$id": "#/properties/types/items/properties/sources/items/properties/labels/properties/zoom_max",
+                      "type": "number",
+                      "title": "Maximum zoom level",
+                      "description": "Maximum zoom value (exclusive) for which the labels for this area source type are supposed to be displayed. Needs to be less than or equal to the zoom_max field of the underlying area type source.",
+                      "minimum": 0.0,
+                      "maximum": 20.0,
+                      "default": 20.0
+                    }
+                  }
+                },
                 "resource": {
                   "$id": "#/properties/types/items/properties/sources/items/properties/resource",
                   "type": "string",
@@ -64,15 +112,6 @@
                   "title": "Database table name",
                   "description": "Name of the database table to use for storing geometries of this area type source. Needs to be unique among all area types",
                   "pattern": "^(.*)$"
-                },
-                "filter_parameters": {
-                  "$id": "#/properties/types/items/properties/sources/items/properties/filter_parameters",
-                  "type": "array",
-                  "title": "Filter conditions",
-                  "description": "Array of Osmfilter arguments that allow the extraction of geometries for this area type source from OSM data",
-                  "items": {
-                    "type": "string"
-                  }
                 },
                 "search_highlight": {
                   "$id": "#/properties/types/items/properties/sources/items/properties/search_highlight",
@@ -88,13 +127,22 @@
                   "description": "Specifies whether the geometries for this area type are supposed to be simplified with respect to the zoom level",
                   "default": true
                 },
+                "z_index": {
+                  "$id": "#/properties/types/items/properties/sources/items/properties/z_index",
+                  "type": "integer",
+                  "title": "Z-Index",
+                  "description": "The z-index determines the order in which geometries of different area types are supposed to be drawn. Geometries of an area type with a higher z-index will be drawn on top of geometries of area types with a lower z-index. The behaviour for area types with the same z-index is undefined. The z-index of area types will not interfere with the z-index of other layers within OpenLayers, since those are considered separately",
+                  "minimum": 0.0,
+                  "maximum": 1000.0,
+                  "default": 0.0
+                },
                 "zoom_min": {
                   "$id": "#/properties/types/items/properties/sources/items/properties/zoom_min",
                   "type": "number",
                   "title": "Minimum zoom level",
                   "description": "Minimum zoom value (inclusive) for which areas of this type source are supposed to be displayed",
                   "minimum": 0.0,
-                  "maximum": 28.0,
+                  "maximum": 20.0,
                   "default": 0.0
                 },
                 "zoom_max": {
@@ -103,20 +151,11 @@
                   "title": "Maximum zoom level",
                   "description": "Maximum zoom value (exclusive) for which areas of this type source are supposed to be displayed",
                   "minimum": 0.0,
-                  "maximum": 28.0,
-                  "default": 28.0
+                  "maximum": 20.0,
+                  "default": 20.0
                 }
               }
             }
-          },
-          "z_index": {
-            "$id": "#/properties/types/items/properties/z_index",
-            "type": "integer",
-            "title": "Z-Index",
-            "description": "The z-index determines the order in which geometries of different area types are supposed to be drawn. Geometries of an area type with a higher z-index will be drawn on top of geometries of area types with a lower z-index. The behaviour for area types with the same z-index is undefined. The z-index of area types will not interfere with the z-index of other layers within OpenLayers, since those are considered separately",
-            "minimum": 0.0,
-            "maximum": 1000.0,
-            "default": 0.0
           }
         }
       }

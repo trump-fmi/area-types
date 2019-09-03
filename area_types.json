@@ -4,149 +4,164 @@
       "name": "Borders",
       "sources": [
         {
-          "resource": "districts",
-          "table_name": "districts",
           "filter_parameters": [
             "--drop-version --keep=\"admin_level=6\" --keep-tags=\"all name= type=\""
           ],
+          "labels": {
+            "arced": true,
+            "zoom_min": 8,
+            "zoom_max": 10
+          },
+          "resource": "districts",
+          "table_name": "districts",
           "search_highlight": false,
           "simplification": true,
+          "z_index": 15,
           "zoom_min": 8,
           "zoom_max": 10
         },
         {
-          "resource": "towns",
-          "table_name": "towns",
           "filter_parameters": [
             "--drop-version --keep=\"admin_level=8\" --keep-tags=\"all name= type=\""
           ],
+          "labels": {
+            "arced": true,
+            "zoom_min": 10,
+            "zoom_max": 14
+          },
+          "resource": "towns",
+          "table_name": "towns",
           "search_highlight": true,
           "simplification": true,
+          "z_index": 15,
           "zoom_min": 10,
           "zoom_max": 14
         },
         {
-          "resource": "villages",
-          "table_name": "villages",
           "filter_parameters": [
             "--drop-version --keep=\"admin_level=9 or admin_level=10\" --keep-tags=\"all name= type=\""
           ],
+          "labels": {
+            "arced": true,
+            "zoom_min": 14,
+            "zoom_max": 20
+          },
+          "resource": "villages",
+          "table_name": "villages",
           "search_highlight": false,
           "simplification": true,
+          "z_index": 15,
           "zoom_min": 14,
           "zoom_max": 20
         }
-      ],
-      "z_index": 15
+      ]
     },
     {
       "name": "Woodland",
       "sources": [
         {
-          "resource": "woodland",
-          "table_name": "woodland",
           "filter_parameters": [
             "--drop-version --keep=\"landuse=forest or natural=wood\" --keep-tags=\"all name= type= area= landuse= natural=\""
           ],
+          "resource": "woodland",
+          "table_name": "woodland",
           "search_highlight": false,
           "simplification": true,
+          "z_index": 2,
           "zoom_min": 7,
           "zoom_max": 20
         }
-      ],
-      "z_index": 2
+      ]
     },
     {
       "name": "Farmland",
       "sources": [
         {
-          "resource": "farmland",
-          "table_name": "farmland",
           "filter_parameters": [
             "--drop-version --keep=\"landuse=farmland or landuse=meadow\" --keep-tags=\"all name= type= area= landuse= natural=\""
           ],
+          "resource": "farmland",
+          "table_name": "farmland",
           "search_highlight": false,
           "simplification": true,
+          "z_index": 2,
           "zoom_min": 7,
           "zoom_max": 20
         }
-      ],
-      "z_index": 2
+      ]
     },
     {
       "name": "Water",
       "sources": [
         {
-          "resource": "water",
-          "table_name": "water",
           "filter_parameters": [
             "--drop-version --keep=\"natural=water or waterway=riverbank or waterway=stream\" --drop=\"tunnel=yes\" --keep-tags=\"all name= type= area= natural= waterway= width=\""
           ],
+          "resource": "water",
+          "table_name": "water",
           "search_highlight": false,
           "simplification": true,
+          "z_index": 10,
           "zoom_min": 8,
           "zoom_max": 20
         }
-      ],
-      "z_index": 10
+      ]
     },
     {
       "name": "Commercial",
       "sources": [
         {
-          "resource": "commercial",
-          "table_name": "commercial",
           "filter_parameters": [
             "--drop-version --keep=\"landuse=commercial or landuse=industrial or landuse=retail\" --keep-tags=\"all name= type= area= landuse=\""
           ],
+          "resource": "commercial",
+          "table_name": "commercial",
           "search_highlight": false,
           "simplification": true,
+          "z_index": 4,
           "zoom_min": 10,
           "zoom_max": 20
         }
-      ],
-      "z_index": 4
+      ]
     },
     {
       "name": "Military",
       "sources": [
         {
-          "resource": "military",
-          "table_name": "military",
           "filter_parameters": [
             "--drop-version --keep=\"landuse=military\" --keep-tags=\"all name= type= area= landuse=\""
           ],
+          "resource": "military",
+          "table_name": "military",
           "search_highlight": false,
           "simplification": true,
+          "z_index": 4,
           "zoom_min": 10,
           "zoom_max": 20
         }
-      ],
-      "z_index": 4
+      ]
     },
     {
       "name": "Residential",
       "sources": [
         {
-          "resource": "residential",
-          "table_name": "residential",
           "filter_parameters": [
             "--drop-version --keep=\"landuse=residential\" --keep-tags=\"all name= type= area= landuse=\""
           ],
+          "resource": "residential",
+          "table_name": "residential",
           "search_highlight": false,
           "simplification": true,
+          "z_index": 4,
           "zoom_min": 10,
           "zoom_max": 20
         }
-      ],
-      "z_index": 4
+      ]
     },
     {
       "name": "Buildings",
       "sources": [
         {
-          "resource": "buildings",
-          "table_name": "buildings",
           "filter_parameters": [
             "--drop-version --keep=\"building=apartments\" --keep-tags=\"all name= type= area= building=\"",
             "--drop-version --keep=\"building=bungalow\" --keep-tags=\"all name= type= area= building=\"",
@@ -215,40 +230,40 @@
             "--drop-version --keep=\"building=ruins\" --keep-tags=\"all name= type= area= building=\"",
             "--drop-version --keep=\"building=yes\" --keep-tags=\"all name= type= area= building=\""
           ],
+          "resource": "buildings",
+          "table_name": "buildings",
           "search_highlight": false,
           "simplification": false,
+          "z_index": 13,
           "zoom_min": 15,
           "zoom_max": 20
         }
-      ],
-      "z_index": 13
+      ]
     },
     {
       "name": "Motorways",
       "sources": [
         {
-          "resource": "motorways",
-          "table_name": "motorways",
           "filter_parameters": [
             "--drop-version --keep=\"highway=motorway\" --keep-tags=\"all name= type= area= highway=\"",
             "--drop-version --keep=\"highway=motorway_link\" --keep-tags=\"all name= type= area= highway=\"",
             "--drop-version --keep=\"highway=trunk\" --keep-tags=\"all name= type= area= highway=\"",
             "--drop-version --keep=\"highway=trunk_link\" --keep-tags=\"all name= type= area= highway=\""
           ],
+          "resource": "motorways",
+          "table_name": "motorways",
           "search_highlight": false,
           "simplification": false,
+          "z_index": 12,
           "zoom_min": 10,
           "zoom_max": 20
         }
-      ],
-      "z_index": 12
+      ]
     },
     {
       "name": "Main streets",
       "sources": [
         {
-          "resource": "main_streets",
-          "table_name": "main_streets",
           "filter_parameters": [
             "--drop-version --keep=\"highway=primary\" --keep-tags=\"all name= type= area= highway=\"",
             "--drop-version --keep=\"highway=primary_link\" --keep-tags=\"all name= type= area= highway=\"",
@@ -257,49 +272,51 @@
             "--drop-version --keep=\"highway=tertiary\" --keep-tags=\"all name= type= area= highway=\"",
             "--drop-version --keep=\"highway=tertiary_link\" --keep-tags=\"all name= type= area= highway=\""
           ],
+          "resource": "main_streets",
+          "table_name": "main_streets",
           "search_highlight": false,
           "simplification": false,
+          "z_index": 12,
           "zoom_min": 13,
           "zoom_max": 20
         }
-      ],
-      "z_index": 12
+      ]
     },
     {
       "name": "Bystreets",
       "sources": [
         {
-          "resource": "bystreets",
-          "table_name": "bystreets",
           "filter_parameters": [
             "--drop-version --keep=\"highway=unclassified\" --keep-tags=\"all name= type= area= highway=\"",
             "--drop-version --keep=\"highway=residential\" --keep-tags=\"all name= type= area= highway=\"",
             "--drop-version --keep=\"highway=living_street\" --keep-tags=\"all name= type= area= highway=\""
           ],
+          "resource": "bystreets",
+          "table_name": "bystreets",
           "search_highlight": false,
           "simplification": false,
+          "z_index": 12,
           "zoom_min": 14,
           "zoom_max": 20
         }
-      ],
-      "z_index": 12
+      ]
     },
     {
       "name": "Railways",
       "sources": [
         {
-          "resource": "railways",
-          "table_name": "railways",
           "filter_parameters": [
             "--drop-version --keep=\"railway=rail\" --keep-tags=\"all name= type= area= railway=\""
           ],
+          "resource": "railways",
+          "table_name": "railways",
           "search_highlight": false,
           "simplification": false,
+          "z_index": 14,
           "zoom_min": 12,
           "zoom_max": 20
         }
-      ],
-      "z_index": 14
+      ]
     }
   ]
 }
