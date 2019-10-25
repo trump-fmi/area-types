@@ -5,7 +5,7 @@
       "types": [
         {
           "filter_parameters": [
-            "--drop-version --keep=\"admin_level=6\" --keep-tags=\"all name= type=\""
+            "--drop-version --keep=\"admin_level=6\" --drop=\"boundary=historic\" --keep-tags=\"all name= type=\""
           ],
           "labels": {
             "arced": true,
@@ -22,7 +22,7 @@
         },
         {
           "filter_parameters": [
-            "--drop-version --keep=\"admin_level=8\" --keep-tags=\"all name= type=\""
+            "--drop-version --keep=\"admin_level=8\" --drop=\"boundary=historic\" --keep-tags=\"all name= type=\""
           ],
           "labels": {
             "arced": true,
@@ -39,7 +39,7 @@
         },
         {
           "filter_parameters": [
-            "--drop-version --keep=\"admin_level=9 or admin_level=10\" --keep-tags=\"all name= type=\""
+            "--drop-version --keep=\"admin_level=9 or admin_level=10\" --drop=\"boundary=historic\" --keep-tags=\"all name= type=\""
           ],
           "labels": {
             "arced": true,
@@ -102,7 +102,7 @@
           "search_highlight": false,
           "simplification": true,
           "z_index": 10,
-          "zoom_min": 8,
+          "zoom_min": 10,
           "zoom_max": 20
         }
       ]
