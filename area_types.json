@@ -94,7 +94,7 @@
           ],
           "resource": "water",
           "table_name": "water",
-          "simplification": true,
+          "simplification": false,
           "z_index": 10,
           "zoom_min": 10,
           "zoom_max": 20
