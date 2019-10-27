@@ -114,13 +114,6 @@
                   "description": "Name of the database table to use for storing geometries of this area type. Needs to be unique among all area types and groups",
                   "pattern": "^(.*)$"
                 },
-                "search_highlight": {
-                  "$id": "#/properties/groups/items/properties/types/items/properties/search_highlight",
-                  "type": "boolean",
-                  "title": "Highlight search result",
-                  "description": "Specifies whether areas of this area type are supposed to be highlighted as search results",
-                  "default": false
-                },
                 "simplification": {
                   "$id": "#/properties/groups/items/properties/types/items/properties/simplification",
                   "type": "boolean",
