@@ -1,0 +1,308 @@
+{
+  "groups": [
+    {
+      "name": "Borders",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"admin_level=6\" --drop=\"boundary=historic\" --keep-tags=\"all name= type=\""
+          ],
+          "labels": {
+            "arced": true,
+            "zoom_min": 8,
+            "zoom_max": 12
+          },
+          "resource": "districts",
+          "table_name": "districts",
+          "simplification": true,
+          "z_index": 15,
+          "zoom_min": 8,
+          "zoom_max": 12
+        },
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"admin_level=8\" --drop=\"boundary=historic\" --keep-tags=\"all name= type=\""
+          ],
+          "labels": {
+            "arced": true,
+            "zoom_min": 12,
+            "zoom_max": 15
+          },
+          "resource": "towns",
+          "table_name": "towns",
+          "simplification": true,
+          "z_index": 15,
+          "zoom_min": 12,
+          "zoom_max": 15
+        },
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"admin_level=9 or admin_level=10\" --drop=\"boundary=historic\" --keep-tags=\"all name= type=\""
+          ],
+          "labels": {
+            "arced": true,
+            "zoom_min": 15,
+            "zoom_max": 20
+          },
+          "resource": "villages",
+          "table_name": "villages",
+          "simplification": true,
+          "z_index": 15,
+          "zoom_min": 15,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Woodland",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"landuse=forest or natural=wood\" --keep-tags=\"all name= type= area= landuse= natural=\""
+          ],
+          "resource": "woodland",
+          "table_name": "woodland",
+          "simplification": false,
+          "z_index": 2,
+          "zoom_min": 7,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Farmland",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"landuse=farmland or landuse=meadow\" --keep-tags=\"all name= type= area= landuse= natural=\""
+          ],
+          "resource": "farmland",
+          "table_name": "farmland",
+          "simplification": false,
+          "z_index": 2,
+          "zoom_min": 7,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Water",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"natural=water or waterway=riverbank or waterway=stream\" --drop=\"tunnel=yes\" --keep-tags=\"all name= type= area= natural= waterway= width=\""
+          ],
+          "resource": "water",
+          "table_name": "water",
+          "simplification": false,
+          "z_index": 10,
+          "zoom_min": 10,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Commercial",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"landuse=commercial or landuse=industrial or landuse=retail\" --keep-tags=\"all name= type= area= landuse=\""
+          ],
+          "resource": "commercial",
+          "table_name": "commercial",
+          "simplification": true,
+          "z_index": 4,
+          "zoom_min": 10,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Military",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"landuse=military\" --keep-tags=\"all name= type= area= landuse=\""
+          ],
+          "resource": "military",
+          "table_name": "military",
+          "simplification": true,
+          "z_index": 4,
+          "zoom_min": 10,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Residential",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"landuse=residential\" --keep-tags=\"all name= type= area= landuse=\""
+          ],
+          "resource": "residential",
+          "table_name": "residential",
+          "simplification": true,
+          "z_index": 4,
+          "zoom_min": 10,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Buildings",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"building=apartments\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=bungalow\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=cabin\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=detached\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=dormitory\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=farm\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=hotel\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=house\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=houseboat\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=residential\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=static_caravan\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=terrace\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=commercial\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=industrial\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=kiosk\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=office\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=retail\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=supermarket\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=warehouse\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=cathedral\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=chapel\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=church\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=mosque\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=religious\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=shrine\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=synagogue\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=temple\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=bakehouse\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=civic\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=government\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=hospital\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=kindergarten\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=public\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=school\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=toilets\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=train_station\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=transportation\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=university\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=barn\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=conservatory\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=cowshed\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=farm_auxiliary\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=greenhouse\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=stable\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=sty\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=grandstand\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=pavilion\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=riding_hall\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=sports_hall\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=stadium\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=hangar\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=hut\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=shed\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=garage\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=garages\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=parking\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=digester\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=service\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=transformer_tower\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=water_tower\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=bunker\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=bridge\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=construction\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=roof\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=ruins\" --keep-tags=\"all name= type= area= building=\"",
+            "--drop-version --keep=\"building=yes\" --keep-tags=\"all name= type= area= building=\""
+          ],
+          "resource": "buildings",
+          "table_name": "buildings",
+          "simplification": false,
+          "z_index": 13,
+          "zoom_min": 15,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Motorways",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"highway=motorway\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=motorway_link\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=trunk\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=trunk_link\" --keep-tags=\"all name= type= area= highway=\""
+          ],
+          "resource": "motorways",
+          "table_name": "motorways",
+          "simplification": false,
+          "z_index": 12,
+          "zoom_min": 10,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Main streets",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"highway=primary\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=primary_link\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=secondary\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=secondary_link\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=tertiary\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=tertiary_link\" --keep-tags=\"all name= type= area= highway=\""
+          ],
+          "resource": "main_streets",
+          "table_name": "main_streets",
+          "simplification": false,
+          "z_index": 12,
+          "zoom_min": 13,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Bystreets",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"highway=unclassified\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=residential\" --keep-tags=\"all name= type= area= highway=\"",
+            "--drop-version --keep=\"highway=living_street\" --keep-tags=\"all name= type= area= highway=\""
+          ],
+          "resource": "bystreets",
+          "table_name": "bystreets",
+          "simplification": false,
+          "z_index": 12,
+          "zoom_min": 14,
+          "zoom_max": 20
+        }
+      ]
+    },
+    {
+      "name": "Railways",
+      "types": [
+        {
+          "filter_parameters": [
+            "--drop-version --keep=\"railway=rail\" --keep-tags=\"all name= type= area= railway=\""
+          ],
+          "resource": "railways",
+          "table_name": "railways",
+          "simplification": false,
+          "z_index": 14,
+          "zoom_min": 12,
+          "zoom_max": 20
+        }
+      ]
+    }
+  ]
+}
