@@ -64,7 +64,7 @@
           "table_name": "woodland",
           "simplification": false,
           "z_index": 2,
-          "zoom_min": 7,
+          "zoom_min": 10,
           "zoom_max": 20
         }
       ]
@@ -80,7 +80,7 @@
           "table_name": "farmland",
           "simplification": false,
           "z_index": 2,
-          "zoom_min": 7,
+          "zoom_min": 10,
           "zoom_max": 20
         }
       ]
