@@ -96,7 +96,7 @@
           "table_name": "water",
           "simplification": false,
           "z_index": 10,
-          "zoom_min": 10,
+          "zoom_min": 12,
           "zoom_max": 20
         }
       ]
